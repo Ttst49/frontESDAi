@@ -13,11 +13,17 @@ import {FormsModule} from "@angular/forms";
 })
 export class PromptZoneComponent {
 
+
   promptService:PromptService = inject(PromptService)
   prompt!:string
+  response!:string
 
   sendPrompt(prompt:string){
-    this.promptService.sendAPrompt(prompt)
+    this.promptService.sendAPrompt(prompt).subscribe({
+      next:(responseFromPrompt:any)=>{
+        this.response = responseFromPrompt
+      }
+    })
   }
 
 }
