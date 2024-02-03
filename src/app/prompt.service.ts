@@ -10,7 +10,16 @@ export class PromptService {
   constructor(private http: HttpClient) {
 
   }
+  headers = {
+    'Content-Type': 'application/json'
+  }
   sendAPrompt(prompt:string){
-    console.log(prompt)
+    let body = {
+      model:"openchat",
+      prompt:prompt,
+      stream:false
+    }
+
+    return this.http.post(GlobalConstants.baseUrl,body,{headers: this.headers})
   }
 }
