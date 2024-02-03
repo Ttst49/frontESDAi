@@ -1,16 +1,10 @@
-
-  <div class="wave-group">
-    <input [(ngModel)]="prompt" required type="text" class="input">
-    <span class="bar"></span>
-    <label class="label">
-      <span class="label-char" style="--index: 0">p</span>
-      <span class="label-char" style="--index: 1">r</span>
-      <span class="label-char" style="--index: 2">o</span>
-      <span class="label-char" style="--index: 3">m</span>
-      <span class="label-char" style="--index: 4">p</span>
-      <span class="label-char" style="--index: 5">t</span>
-    </label>
+<div class="formZone">
+  <div>
+    <div>
+<textarea id="TextArea" [(ngModel)]="prompt" placeholder="Prompt">
+</textarea>
+    </div>
   </div>
-  <button (click)="sendPrompt(prompt)" class="button" type="submit">Go</button>
+  <button (click)="sendPrompt(prompt)" class="button">Envoyer</button>
 
-
+</div>
