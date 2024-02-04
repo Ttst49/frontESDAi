@@ -1,3 +1,3 @@
 export class GlobalConstants {
-  public static baseUrl:string = "https://api.chucknorris.io/jokes/random"
+  public static baseUrl:string = "https://ai.esdlyon.dev"
 }
