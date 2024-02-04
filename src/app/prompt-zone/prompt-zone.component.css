@@ -63,3 +63,8 @@ textarea {
   justify-content: center;
   align-items: center;
 }
+
+.responseZone{
+  width: 50vw;
+  height: 50vh;
+}
